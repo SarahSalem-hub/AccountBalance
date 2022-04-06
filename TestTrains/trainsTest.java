@@ -47,4 +47,10 @@ public class trainsTest {
         String res = T.rushHour(20.30);
         assertEquals("A saver ticket is available",res);
     }
+
+    @Test
+    public void timeMoreThan24() {
+        String res = T.rushHour(26.00);
+        assertEquals("invalid time",res);
+    }
 }
